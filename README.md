@@ -15,3 +15,6 @@ b. Diff, I user 5555 (or equal to mid-end HW, if you're using arm64 based I sugg
 c. Wallet, make sure to use your XLA address. not mine :)
 
 3. build & run it from your VPS
+```
+docker build -t ceroberoz/docker-xlarig:latest .
+docker-compose up```

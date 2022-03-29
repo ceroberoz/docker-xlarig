@@ -26,7 +26,7 @@
    "pools": [
     {
         "url": "mine.scalaproject.io:5555",
-        "user": "SvkA8nsn7amTm214s4tRYxFzmeBqz1d4j9bvmN621mFuJpNdo3n41bxVn1wtP4mKL7g6VfrWRsQreX6bWGUNRuzm2MRkEK2Vu",
+        "user": "SvkEkm2edZaV54EGU8iHajhEKLqbWdMTVJoDD8ipSx7RYbgX9kgXrDmK3n8MRvLN2mVCsJgLYxJFHG3DC9U4rMVY1M2TR8oL8",
         "pass": "docker",
         "keepalive": true,
         "nicehash": false,

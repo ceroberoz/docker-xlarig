@@ -1,3 +1,5 @@
+![Screenshot](yay-its-works.png)
+
 # docker-xlarig
 simple Dockerfile for Scala (XLArig)
 1. XLArig source: https://github.com/scala-network/XLArig

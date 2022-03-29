@@ -13,19 +13,22 @@ ARG DEBIAN_FRONTEND=noninteractive
 # Update Ubuntu Software repository
 RUN apt update
 
-# Install curl, unzip from ubuntu repository
-RUN apt install -y curl unzip libuv1-dev hwloc && \
+# Install dependencies from ubuntu repository
+RUN apt install -y wget git build-essential cmake automake libtool autoconf && \
     rm -rf /var/lib/apt/lists/* && \
     apt clean
 
-# Get latest Scala CLI (Linux) & Unzip to /opt/scala
-RUN curl -L https://github.com/scala-network/XLArig/releases/download/v5.2.3/XLArig-v5.2.3-linux-x86_64.zip --silent > xlarig.zip && \
-    mkdir /opt/scala && \
-    unzip xlarig.zip -d /opt/scala
+# Build scala
+RUN git clone https://github.com/scala-network/XLArig.git && \
+    mkdir XLArig/build && \
+    cd XLArig/scripts && \
+    ./build_deps.sh && \
+    cd ../build && \
+    cmake .. -DXMRIG_DEPS=scripts/deps && \
+    make -j$(nproc)
 
-# Run Scala CLI
-COPY config.json /opt/scala
-RUN /opt/scala/./xlarig
+RUN mv XLArig/build/xlarig / && \
+    rm -rf XLArig
 
-# Expose Port for the Application 
-EXPOSE 80 443
+CMD ["./xlarig", "--config=/etc/scala/config.json"]
+

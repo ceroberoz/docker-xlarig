@@ -1,0 +1,9 @@
+---
+version: "2"
+services:
+  xlarig:
+    image: ceroberoz/docker-xlarig:latest
+    container_name: xlarig
+    restart: unless-stopped
+    volumes:
+      - ./data:/etc/scala/

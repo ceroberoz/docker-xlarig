@@ -1,9 +1,9 @@
 # Download base image ubuntu 20.04
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 # LABEL about the custom image
 LABEL maintainer="ceroberoz@gmail.com"
-LABEL version="0.1"
+LABEL version="0.1a"
 LABEL description="This is custom Docker Image for \
 the Scala CLI Services."
 

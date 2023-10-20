@@ -1,7 +1,7 @@
 ![Screenshot](pow.png)
 
 ## docker-xlarig
-Simple Dockerfile for Scala (XLArig) based on Ubuntu 20.04
+Simple Dockerfile for Scala (XLArig) based on Ubuntu 22.04
 1. XLArig source: https://github.com/scala-network/XLArig
 
 ## How to run
